@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.only(left: 20),
           child: Image.asset(AppImages.routeTop, width: 117, height: 39),
         ),
-        leadingWidth: 130,
+        leadingWidth: 128,
         backgroundColor: AppColors.backgroundColor,
       ),
       body: Column(
