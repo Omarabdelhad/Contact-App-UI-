@@ -1,5 +1,6 @@
 import 'package:contact_app/core/styling/app_colors.dart';
 import 'package:contact_app/core/styling/app_images.dart';
+import 'package:contact_app/core/styling/widgets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,7 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-        
+          
+          showModalBottomSheet(
+            isScrollControlled : true,
+            context: context,
+          
+           builder: (_) =>const BottomSheetAddUser(),
+          );
         },
         child: Icon(Icons.add),
         backgroundColor: AppColors.primaryColor,
