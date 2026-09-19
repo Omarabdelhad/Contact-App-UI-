@@ -2,7 +2,8 @@ import 'package:contact_app/core/styling/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({super.key});
+ final  void Function()? onPressed ;
+  const PrimaryButton({super.key,required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class PrimaryButton extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(16),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         'Enter User',
         style: TextStyle(
